@@ -2,11 +2,11 @@ import { useEffect, useState } from 'react';
 import { withErrorPage } from '../hoc/withErrorPage';
 import { base_url, period_month } from '../utils/constants';
 
-interface ContactProps {
+type ContactProps = {
   heroId: string;
 }
 
-const Contact: React.FC<ContactProps> = () => {
+const Contact = ({ heroId }: ContactProps) => {
   const [planets, setPlanets] = useState(['wait...']);
 
   async function fillPlanets() {

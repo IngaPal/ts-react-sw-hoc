@@ -5,7 +5,7 @@ interface StarWarsProps {
   heroId: string;
 }
 
-const StarWars: React.FC<StarWarsProps> = () => {
+const StarWars = ({ heroId }: StarWarsProps) => {
   return (
     <div className="text-3xl leading-loose text-justify tracking-widest">{starWarsInfo}</div>
   )

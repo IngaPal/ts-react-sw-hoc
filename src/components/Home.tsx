@@ -7,7 +7,7 @@ interface HomeProps {
     heroId: string;
 }
 
-const Home: React.FC<HomeProps> = () => {
+const Home = ({ heroId }: HomeProps) => {
 return (
     <main>
         <Hero />

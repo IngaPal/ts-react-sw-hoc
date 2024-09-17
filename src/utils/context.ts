@@ -1,8 +1,12 @@
 import { createContext } from "react";
 import { defaultHero } from "./constants";
-import { SWContextValue } from "./types";
 
-export const SWContext = createContext<SWContextValue>({
-    changeHero: (hero: string) => {console.log(hero)},
-    hero: defaultHero
+type SWContextType = {
+    hero: string;
+    changeHero: (hero: string) => void;
+};
+
+export const SWContext = createContext<SWContextType>({
+    hero: defaultHero,
+    changeHero: () => {}
 });

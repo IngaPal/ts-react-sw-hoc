@@ -8,7 +8,7 @@ interface AboutMeProps {
   heroId: string;
 }
 
-const AboutMe: React.FC<AboutMeProps> = ({ heroId }) => {
+const AboutMe = ({ heroId }: AboutMeProps) => {
   const [hero, setHero] = useState<HeroInfo>();
 
   useEffect(() => {
